@@ -1,0 +1,280 @@
+/* Variables */
+
+
+:root {
+    --basic-black: #000000;
+    --basic-grey: #283136;
+    --basic-pink: #FB565A;
+    --darker-pink: #E74246;
+    --darkest-pink: #D7373B;
+    --basic-green: #00CA74;
+    --darker-green: #00BC6C;
+    --darkest-green: #00AA62;
+    --basic-yellow: #EFC849;
+    --darker-yellow: #EAB534;
+    --darkest-yellow: #E5A722;
+    --basic-white: #EEEEEE;
+    --light-grey: #444444;
+    --dark-grey: #666666;
+    --transparent-black: rgba(0, 0, 0, 0.25);
+  }
+
+/* Global */
+
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+  }
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.hidden-title {
+    display: none;
+}
+
+  /* Main navigation */
+
+  .main-header {
+    background-color: var(--basic-white);
+}
+
+  .main-navigation a,
+  .cart-link {
+    text-decoration: none;
+    color: var(--basic-black);
+    font-weight: 600;
+}
+
+.main-navigation a:hover,
+.cart-link:hover{
+    color: var(--basic-pink);
+}
+
+.main-navigation a:focus,
+.cart-link:focus {
+    color: var(--transparent-black);
+}
+
+#active-link {
+    border-bottom: 2px solid var(--basic-pink);
+    padding-bottom: 5px;
+}
+
+.main-navigation *,
+.cart-link {
+    text-transform: uppercase;
+}
+
+.site-navigation {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-link {
+    font: inherit;
+    padding: 20px 40px 20px 40px;
+    background-color: var(--basic-pink);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--basic-white);    
+}
+
+.button-link:hover {       
+    background-color: var(--darker-pink);    
+}
+
+.button-link:focus {   
+    background-color: var(--darkest-pink);    
+}
+
+.hidden-slide {
+    display: none;
+}
+
+/* Features */
+
+.feature-header {
+    font-size: 55px;
+    line-height:  55px;
+    margin-top: 82px ; 
+    margin-bottom: 33px;
+}
+
+.feature-description {
+    margin-bottom: 55px;
+ 
+}
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--basic-white);
+}
+
+.feature-item {
+    height: 431px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.feature-item-1 {
+    background-image: url("../img/slide1.png");
+}
+
+.feature-item-2 {
+    background-image: url("../img/slide2.png");
+}
+
+.feature-item-3 {
+    background-image: url("../img/slide3.png");
+}
+
+/* Services */
+
+.services-list {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.services-list li {
+    width: 33%;
+}
+
+.services-list h3 {
+    margin-top: 30px;
+    margin-bottom: 28px;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services-list p {
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.service-button-2 {
+    background-color: var(--basic-green);
+}
+
+.service-button-2:hover {
+    background-color: var(--darker-green)
+}   
+
+.service-button-2:focus {
+    background-color: var(--darkest-green) 
+}
+
+.service-button-3 {
+    background-color: var(--basic-yellow);
+}
+
+.service-button-3:hover {
+    background-color: var(--darker-yellow);
+}
+
+.service-button-3:focus {
+    background-color: var(--darkest-yellow);
+}
+
+/* Сlients */
+.clients a {
+    opacity: 0.2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+}
+
+.clients a:hover {
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0);
+}
+
+.clients a:focus {
+    opacity: 0.1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* About */
+
+.about-title {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 36px;
+}
+
+.about-description {
+    margin-bottom: 49px;    
+}
+
+.about-services  {
+    text-transform: uppercase;
+    margin-bottom: 34px;
+}
+
+.table-title {
+    text-transform: uppercase;
+    font-size: 16px;
+   
+}
+
+.table-numerals {
+    font-size: 45px; 
+    font-weight: bold;
+  }
+
+
+/* Appointment */
+.appointment {
+    font: inherit;.
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.appointment-contacts {
+    color: var(--dark-grey);
+}
+
+.contacts-phone {
+    color: inherit;
+}
+ 
+/* Modal */
+.modal {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);    
+}
+
+.modal-title{
+    font-size: 45px;
+    line-height: 52.73px;
+} 
+
+.modal-label {    
+    font-weight: bold;
+    line-height: 18px;
+    }
+
+.modal-input {
+    color: #444444;
+    line-height: 18px;
+}
+   
+/* Social Networks */
+
+
