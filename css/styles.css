@@ -13,12 +13,20 @@
     --basic-yellow: #EFC849;
     --darker-yellow: #EAB534;
     --darkest-yellow: #E5A722;
-    --basic-white: #EEEEEE;
+    --basic-white: #FFFFFF;
     --light-grey: #444444;
     --dark-grey: #666666;
+    --silver: #DFDFDF;
+    --dimgrey: #D5D5D5;
+    --almost-grey: #EEEEEE; 
+    --none-transparent-black: rgba(0, 0, 0, 0);
     --transparent-black: rgba(0, 0, 0, 0.25);
-  }
-
+    --shadow-black: rgba(0, 0, 0, 0.4);
+    --transparent-black-3: rgba(0, 0, 0, 0.3);
+    --transparent-black-6: rgba(0, 0, 0, 0.6); 
+    --transparent-black-1: rgba(0, 1, 1, 0.1);
+}
+  
 /* Global */
 
 body {
@@ -198,17 +206,17 @@ a {
 /* Сlients */
 .clients a {
     opacity: 0.2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+    box-shadow: 0px 4px 4px var(--transparent-black);  
 }
 
 .clients a:hover {
     opacity: 1;
-    box-shadow: rgba(0, 0, 0, 0);
+    box-shadow: var(--none-transparent-black);
 }
 
 .clients a:focus {
     opacity: 0.1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px var(--transparent-black);
 }
 
 /* About */
@@ -242,9 +250,9 @@ a {
 
 /* Appointment */
 .appointment {
-    font: inherit;.
+    font: inherit;
     border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px var(--transparent-black);
 }
 
 .appointment-contacts {
@@ -257,7 +265,7 @@ a {
  
 /* Modal */
 .modal {
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);    
+    box-shadow: 0px 20px 40px var(--shadow-black);    
 }
 
 .modal-title{
@@ -271,10 +279,103 @@ a {
     }
 
 .modal-input {
-    color: #444444;
+    color: var(--light-grey);
     line-height: 18px;
 }
    
 /* Social Networks */
+.social-links img {
+    background-color: var(--almost-grey);
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++CATALOG+++++++++++++++++++++++++++++++++++++++++ */
+
+/* Products */
+.main-title {
+    color: var(--basic-black);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;    
+}
+.site-title:hover {
+    color: var(--basic-pink);    
+}
+
+.site-title:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.price-offer {
+    text-align: center;
+    background-color: var(--almost-grey);
+    color: var(--basic-black);
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 18px;  
+    text-align: center;
+}
+
+/* Filters */
+
+.list-filter {
+    line-height: 20px; 
+    list-style: none;
+    padding: 0;
+    color: var(--basic-grey);
+}
+
+.show {
+    background-color: var(--almost-grey); 
+    border-radius: 3px;
+    border: none;
+}
+
+.show:hover,
+.show:focus {
+    background-color: var(--silver);
+}
+
+.show:active {
+    background-color: var(--dimgrey);
+    box-shadow: inset 0px 3px 0px var(--transparent-black-1);
+    
+}
+
+.sorting-item {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--transparent-black-3);
+}
+
+.sorting-item a:hover {
+    color:var(--transparent-black-6); 
+}
+
+.sorting-item a:active {
+    color: var(--transparent-black-1);
+}
+
+/* Pagination */
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item {
+    color: var(--basic-black);
+    background-color: var(--almost-grey); 
+}
+
+.pagination-item:hover,
+.pagination-item:focus,
+.pagination-item:active  {
+    background-color: var(--silver);   
+}
 
 
