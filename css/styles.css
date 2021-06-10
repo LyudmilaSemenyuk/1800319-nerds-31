@@ -423,6 +423,7 @@ a {
 }
 
 /* Filters */
+
 .list-filter input {
     font-family: Roboto;
     color: var(--basic-grey);
@@ -497,9 +498,12 @@ a {
 }
 
 .pagination-item:hover,
-.pagination-item:focus,
-.pagination-item:active  {
-    background-color: var(--silver);   
+.pagination-item:focus {
+  background-color: var(--silver);
+}
+
+.pagination-item:active {
+    background-color: var(--basic-white);       
 }
 
 
