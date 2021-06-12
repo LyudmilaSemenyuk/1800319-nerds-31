@@ -14,26 +14,29 @@
 
   <header class="main-header">
     <div class="container">
-      <nav class="main-navigation">
-        <a href="index.html" class="main-header-logo">
+      <div class="top-wrapper">
+        <a class="main-header-logo">
           <img src="img/nerds-logo.svg" width="159" height="65" alt="Логотип Нердс">
         </a>
-        <ul class="list site-navigation">
-          <li><a href="blank.html">Студия</a></li>       
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html" id="active-link" class="active">Магазин</a></li>
-          <li><a href="blank.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <a href="blank.html" class="cart-link">
-        <img src="img/cart-icon.svg" width="15" height="13" alt="Корзина">
-        Корзина
-      </a>
-    </div>
+        <nav class="main-navigation">
+          <ul class="list site-navigation">
+            <li><a href="blank.html" id="active-link" class="active">Студия</a></li>
+            <li><a href="blank.html">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="blank.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <a class="cart-link" href="blank.html">
+          <img src="img/cart-icon.svg" width="15" height="13" alt="Корзина">
+          Корзина
+        </a>
+      </div>
     <h1 class="feature-header">Магазин готовых шаблонов</h1>
     </header>
-    <main>
-        <section>
+
+    <main class="page-catalog container">
+        <section class="filters">
             <h2 class="visually-hidden">Фильтры</h2>
             <form action="#" method="post" class="main-title">
                 <fieldset class="list-filter">
@@ -90,19 +93,25 @@
         </section>
 
         <section>
-            <h2 class="visually-hidden">Шаблоны</h2>
-            <div>
+            
+            <div class="sorting">
                 <p class="main-title">Сортировать</p>
-                <ul class="list sorting-item">
+                <ul class="sorting-item">
                     <li><a>По цене</a></li>
                     <li><a>По типу</a></li>
                     <li><a>По названию</a></li>
                 </ul>
-                <ul class="list sorting-item">
+                <ul class="sorting-item">
                     <li><a><span>По убыванию</span></a></li>
                     <li><a><span>По возрастанию</span></a></li>
                 </ul>                
             </div>
+
+            
+            <section class="catalog">
+
+            <h2 class="visually-hidden">Шаблоны</h2>
+
             <ul class="list">
                 <li>
                     <img src="img/sedona-site.jpg" width="358" height="578" alt="Скриншот сайта Sedona">
@@ -154,12 +163,14 @@
                     </div>
                 </li>
             </ul>
+          
             <ul class="pagination-list">
                 <li class="pagination-item">1</li>
                 <li><a href="#" class="pagination-item">2</a></li>
                 <li><a href="#" class="pagination-item">3</a></li>
                 <li><a href="#" class="main-title pagination-item">Следующая</a></li>
               </ul>
+
         </section>    
     </main>
 
@@ -193,9 +204,9 @@
         <button type="button">Закрыть</button>
       </section>
 
-      <section> 
+      <section class="social-container"> 
         <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="list">
+        <ul class="list footer-social">
           <li>
             <a class="social-button" href="blank.html">
               <img src="img/vk-icon.svg" width="81" height="81" alt="Логотип Вконтакте">
@@ -212,11 +223,13 @@
             </a>
           </li>
         </ul>
-        <div>
-          <h3>Давайте дружить, это выгодно!</h3>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="friendship">
+          <h3 class="friendship-header">Давайте дружить, это выгодно!</h3>
+          <p class="friendship-discount">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
+
+
     </footer>
 
   </body>
