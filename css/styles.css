@@ -19,6 +19,7 @@
     --silver: #DFDFDF;
     --dimgrey: #D5D5D5;
     --almost-grey: #EEEEEE; 
+    --social-grey: #E1E1E1;
     --none-transparent-black: rgba(0, 0, 0, 0);
     --transparent-black: rgba(0, 0, 0, 0.25);
     --shadow-black: rgba(0, 0, 0, 0.4);
@@ -60,29 +61,44 @@ a {
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .page {
     height: 100%;
 }
 
-  /* Main navigation */
-
-.top-wrapper {
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr;
+.container {
+    width: 100%;
+    
+    /* padding: 0 20px; */
 }
 
-.main-header {
+.container-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;    
+}
+
+  /* Main navigation */
+.container-color {
     background-color: var(--almost-grey);
-    outline: 5px solid rgba(0, 255, 0, 0.7);
+} 
+
+.main-header {
+    /* outline: 5px solid rgba(0, 255, 0, 0.7); */
     outline-offset: -5px;
-    width: 1440px;
-    height: 545px;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    margin-top: 49px;
 }
 
 .main-header-logo {
@@ -94,7 +110,7 @@ a {
 .cart-link {
     text-decoration: none;
     color: var(--basic-black);
-    outline: 5px solid rgba(255, 0, 255, 0.3);
+    /* outline: 5px solid rgba(255, 0, 255, 0.3); */
     outline-offset: -5px;
     justify-self: right;
     line-height: 30px;
@@ -118,19 +134,22 @@ a {
 .main-navigation *,
 .cart-link {
     text-transform: uppercase;
+    align-self: center;
 }
+
 .cart-link span {
-    margin-left: 25px;
+    margin-left: 25px;    
 }
 
 .site-navigation {
     list-style: none;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-bottom: 9px;
+    margin: 0;
+    padding: 0;
     line-height: 30px;
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 537px;   
 }
 
 .site-navigation li {
@@ -139,7 +158,7 @@ a {
 
 .button {
     font: inherit;
-    padding: 20px 40px 20px 40px;
+    padding: 17px 54px 15px 54px;
     background-color: var(--basic-pink);
     border-radius: 3px;
     text-transform: uppercase;
@@ -157,12 +176,17 @@ a {
 
 /* Features */
 
+.features {
+    background-color: var(--almost-grey);
+}
+
 .feature-header {
     font-size: 55px;
     line-height:  55px;
     margin-top: 78px ; 
     margin-bottom: 33px;
-    font-weight: 500;    
+    font-weight: 500;   
+    max-width: 538px; 
 }
 
 .feature-description {
@@ -171,11 +195,6 @@ a {
     font-weight: 400; 
 }
 
-.divider {
-    width: 100%;
-    height: 2px;
-    background-color: var(--basic-white);
-}
 
 .feature-item {
     width: 1157px;
@@ -200,9 +219,10 @@ a {
 
 /* Services */
 
-.services-wrapper {
-    width: 1100px;
-    height: 347px;
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: var(--almost-grey);
 }
 
 .services-list {
@@ -218,8 +238,8 @@ a {
 }
 
 .services-list h3 {
-    margin-top: 30px;
-    margin-bottom: 28px;
+    margin-top: 25px;
+    margin-bottom: 16px;
     font-size: 24px;
     line-height: 24px;
     font-weight: 700;
@@ -229,12 +249,18 @@ a {
 .services-list p {
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     color: var(--basic-grey);
+    max-width: 260px;
+}
+
+.button-services {
+    padding: 17px 39px 15px 40px;
 }
 
 .button-green {
     background-color: var(--basic-green);
+    
 }
 
 .button-green:hover {
@@ -257,27 +283,6 @@ a {
     background-color: var(--darkest-yellow);
 }
 
-/* Сlients */
-.clients {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.clients a {
-    opacity: 0.2;
-    box-shadow: 0px 4px 4px var(--transparent-black);  
-}
-
-.clients a:hover {
-    opacity: 1;
-    box-shadow: var(--none-transparent-black);
-}
-
-.clients a:focus {
-    opacity: 0.1;
-    box-shadow: 0px 4px 4px var(--transparent-black);
-}
-
 /* About */
 
 .about-wrapper {
@@ -285,39 +290,62 @@ a {
     grid-template-columns: 2fr 1fr;
 }
 
-.about-title {
+.about h3 {
     font-size: 45px;
     line-height: 45px;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
+    margin-top: 73px;
     font-weight: 500;
-}
+    }
 
-.about-description {
-    margin-bottom: 49px;  
+.about p {
     font-weight: 400;  
-    color: var(--basic-grey)
-}
-
-.about-services  {
-    text-transform: uppercase;
-    margin-bottom: 34px;
     color: var(--basic-grey);
+    max-width: 646px;
+    margin-bottom: 40px; 
 }
 
-.about-list {
-    color:var(--basic-grey);
-    font-weight: 400;    
-}
-
-.table-title {
+.about h4 {
     text-transform: uppercase;
-    font-size: 16px;   
+    margin-bottom: 23px;
+    color: var(--basic-grey);
+} 
+
+.about li {
+    color:var(--basic-grey);
+    font-weight: 400;
+    position: relative;
+    padding-left: 36px;
+    padding-bottom: 35px;
+
 }
 
-.table-numerals td {
+.about li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 2px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-pink);
+}
+
+.about-right {
+    margin-top: 39px;
+}
+
+.about-right h3 {
+    text-transform: uppercase;
+    font-size: 16px;  
+    margin-top: 40px;
+    margin-bottom: 38px; 
+}
+
+ .table-numerals td {
     font-size: 45px; 
     font-weight: 700;
     line-height: 64px;
+     
 }
 
   .table-percents sup {
@@ -329,8 +357,33 @@ a {
     color: var(--basic-grey); 
     line-height: 18px;
     font-weight: 400;
+    margin-bottom: 25px;
 }
 
+/* Сlients */
+.clients-logo {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.clients {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+
+    }
+
+.clients a {
+    opacity: 0.2;    
+}
+
+.clients a:hover {
+    opacity: 1;
+}
+
+.clients a:focus {
+    opacity: 0.1;
+}
 
 
 /* Footer */
@@ -339,6 +392,10 @@ a {
     outline-offset: -5px;
     padding: 130px 0;
 }
+
+/* .map {
+    width: auto;
+} */
 
 /* Appointment */
 .appointment {
@@ -398,26 +455,33 @@ a {
 .social-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-}
-
-.social-links img {
-    background-color: var(--almost-grey);
+  margin-top: 68px;
 }
 
 .footer-social {
-    outline: 5px solid rgba(0, 255, 0, 0.7);
+    /* outline: 5px solid rgba(0, 255, 0, 0.7); */
     outline-offset: -5px;
     display: flex;
-    align-items: center;
-    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    width: 270px;
 }
 
 .footer-social li {
     border-radius: 100px;
-    background-color: var(--basic-pink);
+    background-color: var(--social-grey);
     width: 81px;
     height: 81px;
 }
+
+/* .footer-social li :hover{
+    border-radius: 100px;
+    background-color: var(--darker-pink);
+    width: 81px;
+    height: 81px;
+} */
+
 
 .social-button img {
     margin: 38%;
@@ -427,26 +491,27 @@ a {
 
 /* Friendship */
 .friendship {
-    outline: 5px solid rgba(0, 255, 255, 0.7);
+    /* outline: 5px solid rgba(0, 255, 255, 0.7); */
     outline-offset: -5px;
+    margin-left: 139px;
 }
 
-.friendship-header {
+.friendship h3 {
     font-size: 36px;
     line-height: 36px;
+    margin: 0;
 }
 
-.friendship-discount {
+.friendship p {
     color: var(--light-grey);
     line-height: 22px;
     font-weight: 400;
-}
-
-
+    margin-top: 10px;
+    }
 
 /* +++++++++++++++++++++++++++++++++++++++CATALOG+++++++++++++++++++++++++++++++++++++++++ */
 .page-catalog {
-    outline: 5px solid rgba(255, 0, 0, 0.7);
+    /* outline: 5px solid rgba(255, 0, 0, 0.7); */
     outline-offset: -5px;
     display: grid;
     grid-template-columns: 180px 1fr;
@@ -456,7 +521,7 @@ a {
 /* Sorting */
 
 .sorting {
-    outline: 5px solid rgba(0, 0, 255, 0.7);
+    /* outline: 5px solid rgba(0, 0, 255, 0.7); */
     outline-offset: -5px;
     grid-column: 1 / -1; 
     margin-bottom: 40px;  
@@ -485,7 +550,7 @@ a {
 /* Products */
 
 .catalog {
-    outline: 5px solid rgba(0, 255, 255, 0.7);
+    /* outline: 5px solid rgba(0, 255, 255, 0.7); */
     outline-offset: -5px;
     margin-left: 141px;
   }
@@ -536,7 +601,7 @@ a {
 /* Filters */
 
 .filters {
-    outline: 5px solid rgba(255, 0, 255, 0.7);
+    /* outline: 5px solid rgba(255, 0, 255, 0.7); */
     outline-offset: -5px;
 }
 
