@@ -23,6 +23,7 @@
     --middle-grey: #d7dcdf;
     --shadow-grey: #ABABAB; 
     --foggy-grey: #4D4D4D;
+    --haze-grey: #C1C1C1; 
     --none-transparent-black: rgba(0, 0, 0, 0);
     --transparent-black: rgba(0, 0, 0, 0.25);
     --shadow-black: rgba(0, 0, 0, 0.4);
@@ -187,6 +188,9 @@ a {
 
 .features {
     background-color: var(--almost-grey);
+    position: relative;
+  /* padding-top: 321px; */
+   
 }
 
 .feature-header {
@@ -210,25 +214,64 @@ a {
     min-height: 431px;  
     background-repeat: no-repeat;
     background-position: right;
+    display: none;
     /* margin-top: 0px; */
 }
 
 .feature-item-1 {
-    background-image: url("../img/slide1.png");
-    
+    background-image: url("../img/slide1.png");   
            
 }
 
 .feature-item-2 {
-    background-image: url("../img/slide2.png");
-    display: none;
+    background-image: url("../img/slide2.png");    
 }
 
 .feature-item-3 {
     background-image: url("../img/slide3.png");
-    display: none;
 }
 
+.slide-current {
+    display: block;
+  }
+.slider-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 63px;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    width: 88px;
+    justify-content: space-between;
+    bottom: 92px;
+    left: 536px;
+}
+
+.slider-controls button {
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;    
+  }
+
+  .slider-controls button.current::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;  
+    width: 4px;
+    height: 4px;  
+    border: 2px solid var(--haze-grey);
+    border-radius: 50%;
+  }
 /* Services */
 
 .separator {
@@ -380,9 +423,15 @@ a {
 
 .clients {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr min-content 1fr min-content 1fr min-content 1fr;
     text-align: center;
     align-items: center;
+}
+
+.vertical-line {
+    height: 52px;
+    width: 2px;
+    background-color: var(--almost-grey);
 }
 
 
@@ -402,7 +451,7 @@ a {
 .clients a:focus {
     opacity: 0.1;
 }
-
+    
 
 /* Footer */
 
@@ -529,6 +578,7 @@ a {
     background-color: var(--social-grey);
     width: 81px;
     height: 81px;
+    cursor: pointer;
 }
 
 .footer-social li:hover{
@@ -554,7 +604,7 @@ a {
     margin: 38%;
     height: 25%;
     width: 25%;
-}
+    }
 
 /* Friendship */
 .friendship {
@@ -868,16 +918,18 @@ a {
     margin-top: 25px;
 }
 
+
 .filter-option label {
     position: relative;
     display: block;
     cursor: pointer;
+    padding-left: 36px;
 }
 
 .filter-input-radio + label::before {
     content: "";
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: 8px;
     width: 20px;
     height: 20px;
@@ -890,14 +942,38 @@ a {
     content: "";
     position: absolute;
     top: 18px;
-    left: -30px;
+    left: 9px;
     width: 9px;
     height: 9px;
-    /* background-color: var(--foggy-grey); */
-    background-image: url("../img/radio-on.svg");
+    background-color: var(--foggy-grey);
+    opacity: 0.4;
+    border-radius: 50%;
+}
 
-  }
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    background-position: center;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    background-size: contain;
+}
 
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    background-position: center;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+    background-size: contain;
+    opacity: 0.4;
+}
 
 .show {
     color: var(--basic-black);
@@ -911,6 +987,7 @@ a {
     border: none;
     padding: 18px 88px 15px 88px;
     margin-top: 65px; 
+    cursor: pointer;
 }
 
 .show:hover,
