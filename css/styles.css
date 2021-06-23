@@ -248,8 +248,8 @@ a {
     display: flex;
     width: 88px;
     justify-content: space-between;
-    bottom: 92px;
-    left: 536px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slider-controls button {
@@ -272,6 +272,7 @@ a {
     border: 2px solid var(--haze-grey);
     border-radius: 50%;
   }
+
 /* Services */
 
 .separator {
@@ -416,24 +417,21 @@ a {
 }
 
 /* Сlients */
+/* .partners {
+    margin-bottom: 130px;
+} */
+
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .clients-logo {
     margin-top: 45px;
     margin-bottom: 45px;
 }
-
-.clients {
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr min-content 1fr min-content 1fr;
-    text-align: center;
-    align-items: center;
-}
-
-.vertical-line {
-    height: 52px;
-    width: 2px;
-    background-color: var(--almost-grey);
-}
-
 
 .clients img {
     vertical-align: middle;
@@ -450,6 +448,27 @@ a {
 
 .clients a:focus {
     opacity: 0.1;
+}
+
+.clients li {
+    position: relative;
+}
+
+.clients li::after {
+    content: "";
+    position: absolute;
+    height: 52px;
+    width: 2px;
+    background-color: var(--almost-grey);  
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -60px;
+    bottom: 64px;
+}
+
+.clients li:last-child::after {
+    display: none;
 }
     
 
