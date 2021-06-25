@@ -88,7 +88,7 @@ a {
 }
 
 .container-inner {
-    max-width: 1160px;
+    width: 1160px;
     margin: 0 auto;
     padding: 0 20px;    
 }
@@ -417,9 +417,9 @@ a {
 }
 
 /* Сlients */
-/* .partners {
+.partners {
     margin-bottom: 130px;
-} */
+}
 
 .clients {
     display: flex;
@@ -476,12 +476,12 @@ a {
 
 .main-footer {
     outline-offset: -5px;
-    padding: 130px 0;
+    /* padding: 130px 0; */
 }
 
 .map {
     position: relative;
-    min-height: 416px;
+    height: 416px;
     box-sizing: border-box;
 }
 
@@ -643,7 +643,7 @@ a {
     line-height: 22px;
     font-weight: 400;
     margin-top: 10px;
-    }
+}
 
 /* +++++++++++++++++++++++++++++++++++++++CATALOG+++++++++++++++++++++++++++++++++++++++++ */
 .feature-header-catalog {
@@ -652,9 +652,7 @@ a {
     line-height:  55px;
     font-weight: 500;   
     margin: 72px auto 108px;
-    /* padding-left: auto;
-    padding-right: auto; */
-       }
+}
 
 .page-catalog {
     /* outline: 5px solid rgba(255, 0, 0, 0.7); */
@@ -668,9 +666,6 @@ a {
 
 
 .sorting {
-    /* outline: 5px solid rgba(0, 0, 255, 0.7); */
-    /* outline-offset: -5px;
-    grid-column: 1 / -1;  */
     margin-bottom: 40px;
     margin-left: 141px;
     margin-top: 50px;
@@ -698,6 +693,21 @@ a {
     margin-right: 25px;
 }
 
+.properties a {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.properties a:hover,
+.properties a:focus {
+    opacity: 0.6;
+}
+
+.properties a.properties-current,   
+.properties a:active {
+    opacity: 1;
+}
+
 .arrows {
     padding-inline-start: 0;
 }
@@ -705,27 +715,20 @@ a {
 .arrows li {
     margin-left: 18px;
 }
-/* .sorting-item {
-    color: var(--transparent-black-3);
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-    text-transform: uppercase; 
-    list-style: none;
-    padding: 0;       
-}  */
 
-.sorting-item a:hover {
-    color:var(--transparent-black-6); 
+.arrows a {
+    opacity: 0.2;
 }
 
-.sorting-item a:active {
-    color: var(--transparent-black-1);
+.arrows a:hover,
+.arrows a:focus {
+    opacity: 0.6;
 }
 
-/* .sorting ul {
-    display: inline-block;
-} */
+.arrows a:active,
+.arrows-current a {
+    opacity: 1;
+}
 
 /* Products */
 
@@ -751,19 +754,6 @@ a {
     width: 360px;
     margin-bottom: 26px;
 }
-
-.catalog-item::before {
-    content: "";
-    position: absolute;  
-    width: 360px;
-    height: 40px;  
-    background-image: url("../img/browser.svg");
-    background-repeat: no-repeat;
-}
-
-.catalog-item:hover::before {
-    background-image: url("../img/browser-hover.svg");
-  }
 
   .catalog-item img {
     width: 360px;
@@ -811,6 +801,7 @@ a {
     width: 100%;
     min-height: 231px;  
     background-color: var(--almost-grey);
+    cursor: pointer;
 }
 
 .product-description {
@@ -819,8 +810,36 @@ a {
     line-height: 18px;  
     text-align: center;
     font-weight: 400;
+    margin-bottom: 29px;
 }
 
+.catalog-item::before {
+    content: "";
+    position: absolute;  
+    width: 360px;
+    height: 40px;  
+    background-image: url("../img/browser.svg");
+    background-repeat: no-repeat;
+}
+
+.catalog-item:hover::before {
+    background-image: url("../img/browser-hover.svg");
+}
+
+.price-offer .button {
+    padding: 16px 60px;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+    filter: drop-shadow(0px 6px 15px var(--transparent-black));
+}
+
+.catalog-item:focus .price-offer,
+.catalog-item:hover .price-offer {
+    display: block;
+}
+  
 /* Filters */
 
 .filters {
@@ -1068,40 +1087,3 @@ a {
     padding: 15px 78px;
 }
 
-/* =============Черновые записи=================================== */ 
-
-  
-  /* .price-offer {
-    display: block;
-  } */
-
-  /* .description-container {
-    padding: 0 60px;  
-    text-align: center;
-  }
-  
-  .price-offer h3 {
-    margin: 0;
-    margin-top: 27px;  
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
-    color: #000000;
-    text-transform: uppercase;
-  }
-  
-  .price-offer p {
-    margin-bottom: 29px;
-  
-    line-height: 18px;
-    text-align: center;
-    color: #666666;
-  }
-  
-  .price-offer .button {
-    padding: 16px 60px;
-  }
-  
-  .catalog-item-description .button:active {
-    color: #ffffff;
-  } */
