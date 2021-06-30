@@ -580,42 +580,54 @@ a {
 /* Modal */
 .modal {
     box-shadow: 0px 20px 40px var(--shadow-black); 
-    display: none;
+    /* display: none; */
 }
-
-.modal-title{
-    font-size: 45px;
-    line-height: 53px;
-    margin: 0;
-    margin-bottom: 22px;
-} 
 
 .modal-contacts {
     position: fixed;
-    top: 156px;
+    top: 195px;
     left: 50%;
     z-index: 3;
     width: 760px;
     margin-left: -480px;
-    padding: 68px 100px 85px 100px;
+    padding: 62px 100px 85px 100px;
     background-color: var(--basic-white);
-    overflow: hidden;
 }
 
 .modal-contacts-row {
     display: flex;
     justify-content: space-between;  
+    width: 760px;
+    margin-bottom: 34px;
+    
 }
 
-.modal-contacts-row p {
+.contacts-form input {
+    font-family: Roboto;
+    color: var(--light-grey);
+    line-height: 18px;
+    font-size: 16px;
+    font-weight:400;
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    width: 352px;
+    text-indent: 16px;
+    border: 2px solid var(--smoke-grey);
+    border-radius: 3px;
+}
+
+.modal-name, 
+.modal-mail {
     width: 360px;
 }
 
 .modal-contacts h2 {
     font-size: 45px;
     line-height: 53px;
-    margin: 0;
-    margin-bottom: 22px;
+    margin-top: 3px;
+    margin-bottom: 35px;
 } 
 
 .modal-close {
@@ -666,23 +678,21 @@ a {
     line-height: 18px;
 }
 
-.contacts-form input,
-.contacts-form textarea {
+.modal-textarea {
     font-family: Roboto;
     color: var(--light-grey);
     line-height: 18px;
     font-size: 16px;
     font-weight:400;
-    width: 100%;
-    margin-top: 9px;
-    /* padding: 16px; */
-    padding-bottom: 16px;
-    padding-top: 16px;
+    width: 752px;
+    margin-top: 7px;
     text-indent: 16px;
     border: 2px solid var(--smoke-grey);
-    border-radius: 4px;
+    border-radius: 3px;
+    height: 92px;
+    margin-bottom: 36px;
+    padding: 12px 2px;
 }
-
 .contacts-form input:hover,
 .contacts-form textarea:hover {
     border-color: var(--misty-grey);
@@ -699,14 +709,10 @@ a {
     border-color: var(--darker-pink);
 }
 
-.contacts-form textarea {
-    min-height: 119px;
-    margin-bottom: 47px;
-}
-
 .modal-button {
     padding-left: 83px;
     padding-right: 83px;
+    margin: 0;
 }
 
 /* Social Networks */

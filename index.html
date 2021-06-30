@@ -235,19 +235,19 @@
 
       <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post" >
         <div class="modal-contacts-row">
-          <p>
+          <div class="modal-name">
             <label for="contact-name">Ваше имя:</label>
-            <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия">
-          </p>
-          <p>
+            <input class="name-input" id="contact-name" type="text" name="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="modal-mail">
             <label for="contact-email">Ваш email:</label>
-            <input id="contact-email" type="email" name="email" placeholder="email@example.com">
-          </p>
+            <input  id="contact-email" type="email" name="email" placeholder="email@example.com">
+          </div>
         </div>
-          <p>
+          <div>
             <label for="contact-text">Текст письма:</label>
-            <textarea id="contact-text" name="message" placeholder="В свободной форме"></textarea>
-          </p>
+            <textarea class="modal-textarea" id="contact-text" name="message" placeholder="В свободной форме"></textarea>
+          </div>
         <button type="submit" class="button modal-button">Отправить</button>
       </form>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
