@@ -162,7 +162,7 @@ a {
 
 .active {
     border-bottom: 2px solid var(--basic-pink);
-    padding-bottom: 15px;
+    padding-bottom: 18px;
 }
 
 .main-navigation * {
@@ -193,7 +193,6 @@ a {
 .site-navigation {
     list-style: none;
     margin-top: 16px;
-    margin-left: 6px;
     padding: 0;
     line-height: 30px;
     display: flex;
@@ -208,8 +207,7 @@ a {
 
 .features {
     background-color: var(--almost-grey);
-    position: relative;
-      
+    position: relative;      
 }
 
 .feature-header {
@@ -218,7 +216,7 @@ a {
     margin-top: 78px ; 
     margin-bottom: 28px;
     font-weight: 500;   
-    max-width: 538px; 
+    max-width: 520px; 
 }
 
 .feature-description {
@@ -227,8 +225,14 @@ a {
     font-weight: 400; 
 }
 
+.feature-description-2,
+.feature-description-3 {
+    margin-top: 38px;
+    margin-bottom: 30px;
+}
+
 .feature-item {
-     width: 1160px;
+    width: 1160px;
     min-height: 431px;  
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -237,8 +241,7 @@ a {
 }
 
 .feature-item-1 {
-    background-image: url("../img/slide1.png"); 
-    height: 431px;               
+    background-image: url("../img/slide1.png");              
 }
 
 .feature-item-2 {
@@ -246,7 +249,7 @@ a {
 }
 
 .feature-item-3 {
-    background-image: url("../img/slide3.png");
+    background-image: url("../img/slide3.png");    
 }
 
 .slide-current {
@@ -297,12 +300,6 @@ a {
 .services-wrapper {
     padding-top: 47px;
 }
-
-/* .separator {
-    width: 100%;
-    height: 2px;
-    background-color: var(--almost-grey);
-} */
 
 .services-list {
     position: relative;
@@ -434,13 +431,13 @@ a {
 }
 
 .about li::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 2px;
-  width: 25px;
-  height: 2px;
-  background-color: var(--basic-pink);
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 2px;
+    width: 25px;
+    height: 2px;
+    background-color: var(--basic-pink);
 }
 
 .about-right {
@@ -490,7 +487,6 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* width: 1120px; */
     align-items: center;
 }
 
@@ -586,10 +582,10 @@ a {
 
 /* Appointment */
 .appointment {
-  max-width: 319px;
-  background-color: var(--basic-white);
-  padding: 50px;
-  box-sizing: border-box;
+    max-width: 319px;
+    background-color: var(--basic-white);
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 .appointment-header {
@@ -654,10 +650,10 @@ a {
     margin-top: 5px;
     padding-top: 13px;
     padding-bottom: 12px;
-    width: 352px;
-    text-indent: 16px;
+    text-indent: 14px;
     border: 2px solid var(--smoke-grey);
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 .modal-name, 
@@ -726,14 +722,15 @@ a {
     line-height: 18px;
     font-size: 16px;
     font-weight:400;
-    width: 752px;
+    width: 100%;    
     margin-top: 7px;
-    text-indent: 16px;
+    text-indent: 14px;
     border: 2px solid var(--smoke-grey);
     border-radius: 3px;
-    height: 92px;
+    height: 118px;
     margin-bottom: 36px;
     padding: 12px 2px;
+    box-sizing: border-box;
 }
 .contacts-form input:hover,
 .contacts-form textarea:hover {
@@ -765,7 +762,6 @@ a {
 }
 
 .footer-social {
-    /* outline: 5px solid rgba(0, 255, 0, 0.7); */
     outline-offset: -5px;
     display: flex;
     flex-wrap: wrap;
@@ -777,8 +773,8 @@ a {
 .footer-social li {
     border-radius: 100px;
     background-color: var(--social-grey);
-    width: 81px;
-    height: 81px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
 }
 
@@ -810,9 +806,7 @@ a {
 /* Friendship */
 .friendship {
     padding-left: 14px;
-    padding-top: 8px;
-    /* outline-offset: -5px; */
-    /* margin-left: 139px; */
+    padding-top: 6px;
 }
 
 .friendship h3 {
@@ -830,15 +824,17 @@ a {
 
 /* +++++++++++++++++++++++++++++++++++++++CATALOG+++++++++++++++++++++++++++++++++++++++++ */
 .feature-header-catalog {
+    position: relative;
     text-align: center;
     font-size: 55px;
     line-height:  55px;
     font-weight: 500;   
-    margin: 72px auto 108px;
+    padding-top: 120px;
+    padding-bottom: 75px;
+    background-color: var(--almost-grey);
 }
 
 .page-catalog {
-    /* outline: 5px solid rgba(255, 0, 0, 0.7); */
     outline-offset: -5px;
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -847,11 +843,10 @@ a {
 
 /* Sorting */
 
-
 .sorting {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
     margin-left: 141px;
-    margin-top: 50px;
+    margin-top: 11px;
     display: flex;
     flex-wrap: wrap;        
     align-items: center; 
@@ -892,11 +887,16 @@ a {
 }
 
 .arrows {
-    padding-inline-start: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60px;
+    padding: 0;
+    
 }
 
 .arrows li {
-    margin-left: 18px;
+    margin-left: 19px;
 }
 
 .arrows a {
@@ -916,9 +916,7 @@ a {
 /* Products */
 
 .catalog {
-    /* outline: 5px solid rgba(0, 255, 255, 0.7); */
     outline-offset: -5px;
-    /* margin-left: 141px; */
 }
 
 .catalog-list {
@@ -927,7 +925,7 @@ a {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     margin-left: 140px;
     list-style: none;
 }
@@ -945,7 +943,7 @@ a {
 }
 
 .description-container {
-    padding: 0 60px;  
+    padding: 25px 60px 25px 60px;  
     text-align: center;
 }
 
@@ -979,12 +977,16 @@ a {
 
 .price-offer {     
     position: absolute;
-    bottom: 0;  
+    bottom: 5px;  
     display: none;
     width: 100%;
     min-height: 231px;  
     background-color: var(--almost-grey);
     cursor: pointer;
+}
+
+.price-button {
+    padding: 17px 72px 15px 72px;
 }
 
 .product-description {
@@ -993,6 +995,7 @@ a {
     line-height: 18px;  
     text-align: center;
     font-weight: 400;
+    margin-top: 13px;
     margin-bottom: 29px;
 }
 
@@ -1009,10 +1012,6 @@ a {
     background-image: url("../img/browser-hover.svg");
 }
 
-.price-offer .button {
-    padding: 16px 60px;
-}
-
 .catalog-item:hover,
 .catalog-item:focus {
     filter: drop-shadow(0px 6px 15px var(--transparent-black));
@@ -1026,9 +1025,7 @@ a {
 /* Filters */
 
 .filters {
-    /* outline: 5px solid rgba(255, 0, 255, 0.7); */
-    /* outline-offset: -5px; */
-    margin-top: 61px;
+    margin-top: 24px;
     width: 260px;
    
 }
@@ -1114,21 +1111,34 @@ a {
     font-family: inherit;
     font-size: inherit;
     width: 60px;
-    padding: 10px;
     margin-left: 10px;
     text-align: center;
     color: var(--basic-grey);
     border: none;
     border-radius: 5px;
     background: var(--almost-grey);
-  }
+}   
+
+.min-price {
+    padding: 10px; 
+}
+
+.max-price {
+    padding: 10px 5px 10px 10px;
+    margin: 0px 0px 0px 14px;
+}
 
 .filter-item {
     margin-top: 54px;
     margin-right: 0;
+    margin-left: 0;
     padding: 0;
     border: none;
-    }
+}
+
+.filter-properties {
+    margin-top: 35px;
+}
 
 .filter-item ul {
     color: var(--basic-grey);
@@ -1136,7 +1146,7 @@ a {
     line-height: 40px;
     font-weight: 400;
     text-transform: none;
-    margin-top: 25px;
+    padding-top: 5px;
 }
 
 
@@ -1152,8 +1162,8 @@ a {
     position: absolute;
     left: 0px;
     top: 8px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border: 4px solid var(--foggy-grey);
     opacity: 0.4;
     border-radius: 50%;
@@ -1198,8 +1208,7 @@ a {
 
 .show {
     color: var(--basic-black);
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 16px; 
     font-weight: 500;
     text-transform: uppercase;
     align-items: center;
@@ -1207,7 +1216,7 @@ a {
     border-radius: 3px;
     border: none;
     padding: 18px 88px 15px 88px;
-    margin-top: 65px; 
+    margin-top: 40px; 
     cursor: pointer;
 }
 
@@ -1227,19 +1236,22 @@ a {
 .pagination-list {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    margin-left: 141px;
+    margin-bottom: 75px;
+    padding-top: 2px;
+    padding-left: 2px;
+    
 }
 
 .pagination-list a {
-  padding: 15px 21px;
-  font-weight: 500;
-  line-height: 18px;
-  text-align: center;
-  color: var(--basic-black);
-  text-transform: uppercase;
-  background-color: var(--almost-grey);
-  border-radius: 4px;
+    padding: 14px 20px 14px 20px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--almost-grey);
+    border-radius: 4px;
 }
 
 .pagination-item {
@@ -1267,6 +1279,6 @@ a {
 }
 
 .pagination-item .next-page {
-    padding: 15px 78px;
+    padding: 14px 78px;
 }
 
