@@ -117,8 +117,8 @@ a {
     background-color: var(--darkest-pink);    
 }
 
-
   /* Main navigation */
+
 .container-color {
     background-color: var(--almost-grey);
     overflow: hidden;
@@ -479,6 +479,7 @@ a {
 }
 
 /* Сlients */
+
 .partners {
     margin-bottom: 125px;    
 }
@@ -581,6 +582,7 @@ a {
 
 
 /* Appointment */
+
 .appointment {
     max-width: 319px;
     background-color: var(--basic-white);
@@ -604,6 +606,7 @@ a {
 .appointment-contacts p {
     margin-top: 21px;
 }
+
 .contacts-phone {
     color: inherit;
 }
@@ -616,6 +619,7 @@ a {
  
 
 /* Modal */
+
 .modal {
     box-shadow: 0px 20px 40px var(--shadow-black); 
     display: none;
@@ -636,8 +640,7 @@ a {
     display: flex;
     justify-content: space-between;  
     width: 760px;
-    margin-bottom: 34px;
-    
+    margin-bottom: 34px;    
 }
 
 .contacts-form input {
@@ -732,6 +735,7 @@ a {
     padding: 12px 2px;
     box-sizing: border-box;
 }
+
 .contacts-form input:hover,
 .contacts-form textarea:hover {
     border-color: var(--misty-grey);
@@ -755,10 +759,11 @@ a {
 }
 
 /* Social Networks */
+
 .social-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 36px;
 }
 
 .footer-social {
@@ -804,6 +809,7 @@ a {
     }
 
 /* Friendship */
+
 .friendship {
     padding-left: 14px;
     padding-top: 6px;
@@ -823,6 +829,7 @@ a {
 }
 
 /* +++++++++++++++++++++++++++++++++++++++CATALOG+++++++++++++++++++++++++++++++++++++++++ */
+
 .feature-header-catalog {
     position: relative;
     text-align: center;
@@ -891,8 +898,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     width: 60px;
-    padding: 0;
-    
+    padding: 0;   
 }
 
 .arrows li {
@@ -1026,8 +1032,7 @@ a {
 
 .filters {
     margin-top: 24px;
-    width: 260px;
-   
+    width: 260px;   
 }
 
 .list-filter {
@@ -1039,7 +1044,7 @@ a {
 .range-filter {
     width: 260px;
     margin-top: 49px;
-    }
+}
 
 .list-filter legend {
     font-size: 18px;
@@ -1270,7 +1275,7 @@ a {
 
 .pagination-item:hover,
 .pagination-item:focus {
-  background-color: var(--silver);
+    background-color: var(--silver);
 }
 
 .pagination-item:active {
