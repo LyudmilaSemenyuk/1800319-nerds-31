@@ -480,10 +480,6 @@ a {
 
 /* Сlients */
 
-.partners {
-    margin-bottom: 125px;    
-}
-
 .clients {
     display: flex;
     flex-wrap: wrap;
@@ -493,7 +489,7 @@ a {
 
 .clients-logo {
     margin-top: 45px;
-    margin-bottom: 45px;
+    margin-bottom: 125px;
 }
 
 .clients img {
@@ -627,12 +623,15 @@ a {
 
 .modal-contacts {
     position: fixed;
-    top: 195px;
+    /* top: 195px; */
+    /* left: 50%; */
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
     width: 760px;
-    margin-left: -480px;
-    padding: 62px 100px 85px 100px;
+    /* margin-left: -480px; */
+    padding: 50px 100px 85px 100px;
     background-color: var(--basic-white);
 }
 
@@ -640,7 +639,7 @@ a {
     display: flex;
     justify-content: space-between;  
     width: 760px;
-    margin-bottom: 34px;    
+    margin-bottom: 30px;      
 }
 
 .contacts-form input {
@@ -651,8 +650,8 @@ a {
     font-weight:400;
     width: 100%;
     margin-top: 5px;
-    padding-top: 13px;
-    padding-bottom: 12px;
+    padding-top: 15px;
+    padding-bottom: 14px;
     text-indent: 14px;
     border: 2px solid var(--smoke-grey);
     border-radius: 3px;
@@ -667,13 +666,14 @@ a {
 .modal-contacts h2 {
     font-size: 45px;
     line-height: 53px;
-    margin-top: 3px;
+    margin: 0;
+    margin-top: 32px;
     margin-bottom: 35px;
 } 
 
 .modal-close {
     position: absolute;
-    top: 78px;
+    top: 95px;
     right: 90px;
     width: 21px;
     height: 21px;
@@ -719,6 +719,11 @@ a {
     line-height: 18px;
 }
 
+.modal-letter {
+    margin-top: 10px;
+}
+
+
 .modal-textarea {
     font-family: Roboto;
     color: var(--light-grey);
@@ -726,12 +731,12 @@ a {
     font-size: 16px;
     font-weight:400;
     width: 100%;    
-    margin-top: 7px;
+    margin-top: 8px;
+    margin-bottom: 38px;
     text-indent: 14px;
     border: 2px solid var(--smoke-grey);
     border-radius: 3px;
     height: 118px;
-    margin-bottom: 36px;
     padding: 12px 2px;
     box-sizing: border-box;
 }
@@ -786,27 +791,29 @@ a {
 .footer-social li:hover{
     border-radius: 100px;
     background-color: var(--darker-pink);
-    width: 81px;
-    height: 81px;
+    width: 80px;
+    height: 80px;
 }
 
 .footer-social li:active{
     border-radius: 100px;
     background-color: var(--darker-pink);
     box-shadow:inset 0 3px 0 var(--transparent-grey); 
-    width: 81px;
-    height: 81px;
+    width: 80px;
+    height: 80px;
 }
 
 .footer-social li:active img {
     opacity: 0.3;
 }
 
-.social-button img {
-    margin: 38%;
-    height: 25%;
-    width: 25%;
-    }
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
 
 /* Friendship */
 
@@ -858,6 +865,7 @@ a {
     flex-wrap: wrap;        
     align-items: center; 
 }
+
 .sorting p {
     margin-right: 226px;
 }
@@ -1154,21 +1162,21 @@ a {
     padding-top: 5px;
 }
 
-
-.filter-option label {
+.filter-item label {
     position: relative;
     display: block;
     cursor: pointer;
     padding-left: 36px;
+    color: var(--basic-grey);
 }
 
 .filter-input-radio + label::before {
     content: "";
     position: absolute;
-    left: 0px;
-    top: 8px;
-    width: 18px;
-    height: 18px;
+    left: 0;
+    top: 9px;
+    width: 17px;
+    height: 17px;
     border: 4px solid var(--foggy-grey);
     opacity: 0.4;
     border-radius: 50%;
@@ -1177,13 +1185,34 @@ a {
 .filter-input-radio:checked + label::after {
     content: "";
     position: absolute;
-    top: 18px;
-    left: 9px;
+    top: 17px;
+    left: 8px;
     width: 9px;
     height: 9px;
     background-color: var(--foggy-grey);
     opacity: 0.4;
     border-radius: 50%;
+}
+
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after,
+.filter-input-radio:focus + label::before,
+.filter-input-radio:focus + label::after {
+    opacity: 1;
+}
+
+.filter-input-radio:active + label::before,
+.filter-input-radio:active + label::after {
+    opacity: 0.4;
+}
+
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:disabled + label::after {
+    opacity: 0.1;
+}
+
+.filter-input-radio:disabled + label: {
+    opacity: 0.3;
 }
 
 .filter-input-checkbox + label::before {
@@ -1196,19 +1225,30 @@ a {
     height: 23px;
     background-image: url("../img/checkbox-off.svg");
     background-size: contain;
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:disabled + label::after {
+    opacity: 0.1;
+}
+
+.filter-input-checkbox:checked + label::before {
+    display: none;
 }
 
 .filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
-    left: 4px;
+    left: 0;
     top: 8px;
     background-position: center;
-    width: 23px;
-    height: 23px;
+    width: 25px;
+    height: 24px;
     background-image: url("../img/checkbox-on.svg");
     background-size: contain;
     opacity: 0.4;
+    background-repeat: no-repeat;
 }
 
 .show {
