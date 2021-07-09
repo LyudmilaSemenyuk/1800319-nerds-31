@@ -617,19 +617,16 @@ a {
 
 .modal {
     box-shadow: 0px 20px 40px var(--shadow-black); 
-    /* display: none; */
+    display: none;
 }
 
 .modal-contacts {
     position: fixed;
-    /* top: 195px; */
-    /* left: 50%; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    width: 760px;
-    /* margin-left: -480px; */
+    width: 760px;    
     padding: 62px 100px 85px 100px;
     background-color: var(--basic-white);
 }
@@ -665,7 +662,8 @@ a {
 .modal-contacts h2 {
     font-size: 45px;
     line-height: 53px;
-    margin: 0;      
+    margin: 0; 
+    margin-bottom: 38px;     
 } 
 
 .modal-close {
@@ -1187,15 +1185,8 @@ a {
 }
 
 .filter-input-radio:hover + label::before,
-.filter-input-radio:hover + label::after,
-.filter-input-radio:focus + label::before,
-.filter-input-radio:focus + label::after {
+.filter-input-radio:hover + label::after {
     opacity: 1;
-}
-
-.filter-input-radio:active + label::before,
-.filter-input-radio:active + label::after {
-    opacity: 0.4;
 }
 
 .filter-input-radio:disabled + label::before,
@@ -1203,7 +1194,7 @@ a {
     opacity: 0.1;
 }
 
-.filter-input-radio:disabled + label: {
+.filter-input-radio:disabled + label {
     opacity: 0.3;
 }
 
@@ -1220,9 +1211,18 @@ a {
     opacity: 0.4;
 }
 
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:checked:hover + label::after {
+    opacity: 1;
+}
+
 .filter-input-checkbox:disabled + label::before,
 .filter-input-checkbox:disabled + label::after {
     opacity: 0.1;
+}
+
+.filter-input-checkbox:disabled + label {
+    opacity: 0.3;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1265,8 +1265,7 @@ a {
 .show:active {
     background-color: var(--dimgrey);
     box-shadow: inset 0px 3px 0px var(--transparent-black-1);    
-}
-
+} 
 
 /* Pagination */
 
