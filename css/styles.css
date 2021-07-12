@@ -125,44 +125,67 @@ a {
 } 
 
 .main-header {
-    position: absolute;
-    top: 49px;
-    left: 20px;
+    /* position: absolute; */
+    /* top: 49px;
+    left: 20px; */
     width: 100%;
     margin-top: 0;
     z-index: 10;
     box-sizing: border-box;
-    max-width: 1160px;
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr;   
+    /* max-width: 1160px; */
+    display: flex;
+    padding-top: 15px;
+    z-index: 10;
+    /* grid-template-columns: 1fr min-content 1fr;    */
 }
 
 .main-header-logo {
     width: 160px;
     height: 65px;
+    z-index: 3;
+}
+
+.header-logo-catalog:hover {
+    opacity: 0.7;
+}
+
+.header-logo-catalog:focus {
+    opacity: 0.3;
+}
+
+.header-logo-catalog:active {
+    opacity: 1;
 }
 
 .main-navigation a,
-.cart-link {
+.cart-link a {
     text-decoration: none;
     color: var(--basic-black);
     justify-self: right;
     line-height: 30px;
 }
 
+.cart-link {
+    max-width: 180px;    
+    text-align: right;
+    margin-top: 16px; 
+    margin-bottom: 0;
+    margin-left: auto;   
+}
+
+.main-navigation a:active,
+.cart-link a:active {
+    color: var(--basic-black);
+}
+
 .main-navigation a:hover,
-.cart-link:hover{
+.cart-link a:hover{
     color: var(--basic-pink);
 }
 
 .main-navigation a:focus,
-.cart-link:focus {
+.cart-link a:focus {
     color: var(--transparent-black);
-}
-
-.active {
-    border-bottom: 2px solid var(--basic-pink);
-    padding-bottom: 18px;
 }
 
 .main-navigation * {
@@ -176,6 +199,7 @@ a {
     margin-top: 15px;
     padding-left: 17px;   
     position: relative;
+    list-style: none;
 }
 
 .cart-link::before {
@@ -195,18 +219,34 @@ a {
     margin-top: 16px;
     padding: 0;
     line-height: 30px;
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
     flex-wrap: wrap;
-    align-items: center;
-    width: 437px;      
+    justify-content: center;
+    width: 840px; 
+    z-index: 3;
+}
+
+.site-navigation a {
+    padding: 0 23px;
+    position:relative;
+}
+
+.site-navigation a.active::after {
+    content: "";
+    position: absolute;
+    right: 23px;
+    bottom: -22px;
+    left: 23px;  
+    height: 2px;
+    background-color: var(--basic-pink);
 }
 
 /* Features */
 
 .features {
     background-color: var(--almost-grey);
-    position: relative;      
+    position: relative; 
+    min-height: 433px;     
 }
 
 .feature-header {
@@ -231,12 +271,11 @@ a {
 }
 
 .feature-item {
-    width: 1160px;
-    min-height: 431px;  
+    position: absolute;
+    width: 100%;
+    padding-bottom: 80px;    
     background-repeat: no-repeat;
-    background-position: right bottom;
-    display: none;    
-    padding-top: 80px;      
+    background-position: 100%;
 }
 
 .feature-item-1 {
@@ -283,7 +322,7 @@ a {
     cursor: pointer;    
 }
 
-  .slider-controls button.current::after {
+.slider-controls button.current::after {
     content: "";
     position: absolute;
     top: 5px;
@@ -324,10 +363,10 @@ a {
 }
 
 .services-list h3 {
-    margin-top: 22px;
+    margin-top: 17px;
     margin-bottom: 18px;
     font-size: 24px;
-    line-height: 24px;
+    line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -639,7 +678,7 @@ a {
 }
 
 .contacts-form input {
-    font-family: Roboto;
+    font-family: "Roboto", Arial, sans-serif;
     color: var(--light-grey);
     line-height: 18px;
     font-size: 16px;
@@ -715,7 +754,7 @@ a {
 }
 
 .modal-textarea {
-    font-family: Roboto;
+    font-family: "Roboto", Arial, sans-serif;
     color: var(--light-grey);
     line-height: 18px;
     font-size: 16px;
@@ -827,13 +866,12 @@ a {
 
 /* +++++++++++++++++++++++++++++++++++++++CATALOG+++++++++++++++++++++++++++++++++++++++++ */
 
-.feature-header-catalog {
-    position: relative;
+.feature-header-catalog {    
     text-align: center;
     font-size: 55px;
     line-height:  55px;
     font-weight: 500;   
-    padding-top: 120px;
+    padding-top: 42px;
     padding-bottom: 75px;
     background-color: var(--almost-grey);
 }
@@ -869,6 +907,11 @@ a {
     font-weight: 400;
     text-transform: uppercase; 
     list-style: none;    
+    
+}
+
+.properties {
+    max-width: 336px;
 }
 
 .properties li {
@@ -893,6 +936,7 @@ a {
 
 .arrows {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     width: 60px;
@@ -938,12 +982,19 @@ a {
     position: relative;  
     width: 360px;
     margin-bottom: 26px;
+    object-fit: cover;
 }
 
 .catalog-item img {
     width: 360px;
     height: 576px;
     padding-top: 40px;
+    object-fit: cover;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: border-box;
+    box-shadow: 0 2px 1px 0 var(--misty-grey);
+    border: 1px solid var(--almost-grey);
 }
 
 .description-container {
@@ -987,6 +1038,9 @@ a {
     min-height: 231px;  
     background-color: var(--almost-grey);
     cursor: pointer;
+    object-fit: contain;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .price-button {
@@ -1006,10 +1060,10 @@ a {
 .catalog-item::before {
     content: "";
     position: absolute;  
-    width: 360px;
+    width: 361px;
     height: 40px;  
-    background-image: url("../img/browser.svg");
-    background-repeat: no-repeat;
+    background-image: url("../img/browser.svg");    
+    background-color: var(--basic-white);
 }
 
 .catalog-item:hover::before {
@@ -1029,7 +1083,7 @@ a {
 /* Filters */
 
 .filters {
-    margin-top: 24px;
+    margin-top: 18px;
     width: 260px;   
 }
 
@@ -1046,7 +1100,7 @@ a {
 
 .list-filter legend {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 30px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -1054,7 +1108,7 @@ a {
 .range-controls {
     position: relative;
     height: 41px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     padding-top: 39px;
     background-color: var(--almost-grey);
     padding-right: 20px;
@@ -1113,6 +1167,7 @@ a {
 .price-controls input {
     font-family: inherit;
     font-size: inherit;
+    line-height: 22px;
     width: 60px;
     margin-left: 10px;
     text-align: center;
@@ -1132,7 +1187,7 @@ a {
 }
 
 .filter-item {
-    margin-top: 54px;
+    margin-top: 50px;
     margin-right: 0;
     margin-left: 0;
     padding: 0;
@@ -1140,16 +1195,17 @@ a {
 }
 
 .filter-properties {
-    margin-top: 35px;
+    margin-top: 27px;
 }
-
+.filter-item legend {
+    margin-bottom: 15px;
+}
 .filter-item ul {
     color: var(--basic-grey);
     font-size: 16px;
-    line-height: 40px;
+    line-height: 20px;
     font-weight: 400;
-    text-transform: none;
-    padding-top: 5px;
+    text-transform: none;    
 }
 
 .filter-item label {
@@ -1157,6 +1213,7 @@ a {
     display: block;
     cursor: pointer;
     padding-left: 36px;
+    padding-bottom: 20px;
     color: var(--basic-grey);
 }
 
@@ -1164,7 +1221,7 @@ a {
     content: "";
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 0;
     width: 17px;
     height: 17px;
     border: 4px solid var(--foggy-grey);
@@ -1175,7 +1232,7 @@ a {
 .filter-input-radio:checked + label::after {
     content: "";
     position: absolute;
-    top: 17px;
+    top: 8px;
     left: 8px;
     width: 9px;
     height: 9px;
@@ -1194,6 +1251,11 @@ a {
     opacity: 0.1;
 }
 
+.filter-input-radio:active + label::before,
+.filter-input-radio:active + label::after {
+    opacity: 0.2;
+}
+
 .filter-input-radio:disabled + label {
     opacity: 0.3;
 }
@@ -1202,7 +1264,7 @@ a {
     content: "";
     position: absolute;
     left: 0px;
-    top: 8px;
+    top: 0;
     background-position: center;
     width: 23px;
     height: 23px;
@@ -1214,6 +1276,11 @@ a {
 .filter-input-checkbox:hover + label::before,
 .filter-input-checkbox:checked:hover + label::after {
     opacity: 1;
+}
+
+.filter-input-checkbox:active + label::before,
+.filter-input-checkbox:checked:active + label::after {
+    opacity: 0.2;
 }
 
 .filter-input-checkbox:disabled + label::before,
@@ -1233,7 +1300,7 @@ a {
     content: "";
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 0;
     background-position: center;
     width: 25px;
     height: 24px;
@@ -1253,7 +1320,7 @@ a {
     border-radius: 3px;
     border: none;
     padding: 18px 88px 15px 88px;
-    margin-top: 40px; 
+    margin-top: 30px; 
     cursor: pointer;
 }
 
