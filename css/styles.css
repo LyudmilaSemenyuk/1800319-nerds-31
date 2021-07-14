@@ -410,33 +410,11 @@ a {
 
 /* About */
 
-.about-wrapper {
-    position: relative;
+.about-wrapper {    
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-bottom: 99px;
+    margin-bottom: 50px;
 }
-
-.about-wrapper::before {
-    content: "";
-    position:absolute;
-    bottom: -53px;
-    left: 0px;
-    width: 1158px;
-    height: 2px;
-    background-color: var(--almost-grey);
-}
-
-.about-wrapper::after {
-    content: "";
-    position:absolute;
-    bottom: -235px;
-    left: 0;
-    width: 1158px;
-    height: 2px;
-    background-color: var(--almost-grey);
-}
-
 
 .about h3 {
     font-size: 45px;
@@ -455,8 +433,7 @@ a {
 
 .about h4 {
     text-transform: uppercase;
-    margin-bottom: 25px;
-    
+    margin-bottom: 25px;    
     color: var(--basic-grey);
 } 
 
@@ -520,14 +497,16 @@ a {
 
 .clients {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; 
+    width: 1160px;  
+    border-top: 2px solid var(--almost-grey);
+    border-bottom: 2px solid var(--almost-grey);
+    padding: 45px 0 44px;     
 }
 
 .clients-logo {
     margin-top: 45px;
-    margin-bottom: 125px;
+    margin-bottom: 80px;
 }
 
 .clients img {
@@ -547,28 +526,62 @@ a {
     opacity: 0.1;
 }
 
-.clients li {
-    position: relative;
-    width: 22.5%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.clients-list {
+    position: relative;    
+    align-self: center;
+    justify-content: center;    
 }
 
-.clients li::after {
+.clients-list:nth-child(1) {
+    position: relative;
+    padding-right: 96px; 
+    padding-left: 30px;   
+}    
+
+.clients-list:nth-child(4n+3) {
+    position: relative;
+    padding-left: 107px;
+    padding-right: 115px;
+}
+
+.clients-list:nth-child(n+5) {
+    position: relative;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 80px;
+}
+
+.clients-list:nth-child(1)::after {
     content: "";
     position: absolute;
     height: 52px;
     width: 2px;
-    background-color: var(--almost-grey);  
-    display: block;
+    background-color: var(--almost-grey);      
     top: 50%;
     transform: translateY(-50%);
-    right: -20px;
+    right: 40px;
 }
 
-.clients li:last-child::after {
-    display: none;
+.clients-list:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    height: 52px;
+    width: 2px;
+    background-color: var(--almost-grey);      
+    top: 50%;
+    transform: translateY(-50%);
+    right: -45px;
+}
+
+.clients-list:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    height: 52px;
+    width: 2px;
+    background-color: var(--almost-grey);      
+    top: 50%;
+    transform: translateY(-50%);
+    right: 57px;
 }
     
 /* Footer */
@@ -886,16 +899,11 @@ a {
 /* Sorting */
 
 .sorting {
-    margin-bottom: 44px;
+    margin-bottom: 40px;
     margin-left: 141px;
     margin-top: 11px;
-    display: flex;
-    flex-wrap: wrap;        
+    display: flex;    
     align-items: center; 
-}
-
-.sorting p {
-    margin-right: 226px;
 }
 
 .sorting ul {
@@ -906,12 +914,13 @@ a {
     line-height: 18px;
     font-weight: 400;
     text-transform: uppercase; 
-    list-style: none;    
-    
+    list-style: none;  
+    margin-left: 5px;    
 }
 
-.properties {
-    max-width: 336px;
+.properties {    
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
 .properties li {
@@ -973,7 +982,7 @@ a {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     margin-left: 140px;
     list-style: none;
 }
@@ -982,7 +991,7 @@ a {
     position: relative;  
     width: 360px;
     margin-bottom: 26px;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 .catalog-item img {
@@ -1340,7 +1349,7 @@ a {
     list-style: none;
     display: flex;
     margin-left: 141px;
-    margin-bottom: 75px;
+    margin-bottom: 72px;
     padding-top: 2px;
     padding-left: 2px;
     
